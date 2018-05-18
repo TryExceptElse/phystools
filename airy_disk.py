@@ -36,7 +36,7 @@ def main():
     arr = np.ndarray((IMG_WIDTH, IMG_WIDTH))
 
     # populate array
-    arr = phys.airy_arr(wavelength, a, i0, arr=arr, view_theta=view_theta)
+    arr = phys.airy_arr(wavelength, a, i0=i0, arr=arr, view_theta=view_theta)
 
     plt.imshow(arr, cmap='gray', norm=norm)
     plt.show()

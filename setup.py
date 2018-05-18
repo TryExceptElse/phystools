@@ -12,7 +12,9 @@ setup(
     ext_modules=cythonize([
         Extension(
             'phys',
-            sources=['phys.pyx']
+            sources=['phys.pyx'],
+            extra_compile_args=["-fopenmp", '-O3'],
+            extra_link_args=['-fopenmp'],
         )
     ])
 )
